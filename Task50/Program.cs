@@ -13,12 +13,13 @@ int row = Convert.ToInt32(Console.ReadLine());
 Console.Write("Enter amount of columns: ");
 int col = Convert.ToInt32(Console.ReadLine());
 
-Console.Write("Enter a number you want to search: ");
-int num = Convert.ToInt32(Console.ReadLine());
-
 int[,] mat = FillMatrix(row, col, -10, 10);
 PrintMatrix(mat);
 ElementSearch(mat);
+
+Console.Write("Enter a number you want to search: ");
+int num = Convert.ToInt32(Console.ReadLine());
+
 int countSearchingNumber = Count(mat, num);
 PositionSearch(mat, num, countSearchingNumber);
 
@@ -95,7 +96,7 @@ void PositionSearch(int[,] matrix, int num, int count)
             {
                 if (matrix[i, j] == num)
                 {
-                    Console.WriteLine($"There is number '{num}' in the position ({i}, {j})");
+                    Console.WriteLine($"There is number '{num}' in the position ({i}, {j}).");
                 }
             }
         }
